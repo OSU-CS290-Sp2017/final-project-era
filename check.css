@@ -1,0 +1,22 @@
+body {
+  padding: 0px 30px 30px 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+.choice-line{
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.choice  {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.i{
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.choice-line label{
+  display:block;
+}
