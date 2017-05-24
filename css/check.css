@@ -1,0 +1,55 @@
+.check_body {
+  /*padding: 0px 30px 30px 80px;*/
+  padding:auto;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+
+}
+.choice-line{
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.choice  {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+
+.i{
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.choice-line label{
+  display:block;
+}
+
+.choice-name {
+	padding-bottom: 12px;
+	padding-top:12px;
+	font-size:25px;
+	font-weight: bold;
+
+}
+
+.description {
+	color: rgba(125,125,125,0.9);
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+
+}
+
+.inner-choice{
+	  padding-bottom: 12px;
+  	  border-bottom: 1px solid #eee;
+  	  display: inline;
+}
+
+/*.inline-choice-continer{
+	display: inline-block;
+}*/
+
+.inline-choice{
+	display: inline-block;
+	padding-right: 10%;
+}
