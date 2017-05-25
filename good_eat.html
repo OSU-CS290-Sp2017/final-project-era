@@ -44,12 +44,9 @@
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="css/style.css">
 
-	
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="css/check.css">
+		<!-- Login Style -->
+	<link rel="stylesheet" href="css/login-style.css">
 
 	</head>
 	<body>
@@ -73,28 +70,29 @@
 			<div id="fh5co-main-nav">
 			<nav id="fh5co-nav" role="navigation">
 				<ul>
-					<li>
+					<li class="active">
 						<a href="index.html">Drink</a>
 					</li>
-					<!-- <li>
-						<a href="inside-page.html">Inside Page</a>
-					</li> -->
 					<li>
 						<a href="sandwich.html">sandwich</a>
 					</li>
 
-					<li >
+					<li>
 						<a href="salad.html">salad</a>
 					</li>
 
-					<li class="active">
+					<li class = "active">
 						<a href="good_eat.html">good eat</a>
 					</li>
 
 					<li>
-						<a href="breakfast_sandwiches_burritos.html">breakfast sandwiches+burritos</a>
+						<a href="breakfast_sandwiches_burritos.html">burritos</a>
 					</li>
 
+					<li>
+						<button  id="popUp-login-box">Log in</button> 
+					</li>
+						
 					
 				</ul>
 			</nav>
@@ -103,216 +101,237 @@
 		</header>
 		<!-- Header -->
 		
+
+				<!-- user login part -->
+		<div id="user-login-box" class = "hidden">
+				<div >
+					<img src="images/osuBeavers.jpg" class="login-beaver-image"><p class="user-login-greeting">Login Beavers!</p>
+				</div>
+				<button type="button" id="login-close-button">&times;</button>
+				<div class="user-input-forms">
+					<form action="" method="get" name="register">
+						<input name="fullname" type="text" value="Enter your OSU ID..."  onClick="border: 1px solid #30a8da;" id="username"/>
+						<input name="email" type="text" value="Enter your email address..."  onClick="border: 1px solid #30a8da;" id="mail"/>
+						<input name="password" type="password" value="Enter a password..." onClick="border: 1px solid #30a8da;" id="password"/>
+					</form>
+				</div>
+
+				<button class="create-account user-lonin-button" >Create Account</button>
+				<button class="login-account user-lonin-button" >Login</button>
+		</div>
+		<!-- end of user login part -->
+			
+		<!-- Order food part -->
+		<button type="button" id="create-order-button">
+				<p id="create-order-icon"><i class="fa fa-cutlery"></i></p>
+				<a href="" id="order-meal">Order</a>
+
+		</button>
+		<!-- end of Order food part -->
+
+
+
+
+
+
+
 		<!-- Main -->
-		<main role="main">
+				<main role="main">
 
-				<!-- Slider -->
-<!-- 				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-push-4 col-sm-8 col-sm-push-4">
-						
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="owl-carousel owl-carousel-fullwidth">
-						    <div class="item"><img src="images/slide_1.jpg" alt="image"></div>
-						    <div class="item"><img src="images/slide_2.jpg" alt="image"></div>
-						    <div class="item"><img src="images/slide_3.jpg" alt="image"></div>
-						    <div class="item"><img src="images/slide_4.jpg" alt="image"></div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- Slider -->
 
-				<!-- <div class="fh5co-spacer fh5co-spacer-lg"></div> -->
 				
 				<!-- Features -->
 				<div class="fh5co-features">
 					<div class="container">
 						<div class="fh5co-section-title text-center">
-							<h2 class="fh5co-title">Order your own drink!</h2>
+							<h2 class="fh5co-title">Order your own sandwich!</h2>
 						</div>
 						<div class="fh5co-spacer fh5co-spacer-sm"></div>
-						<div class="row">
+						  
+						<div class = "check_body">
+							<form method="post" action="/">
 
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-command"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Simplicity</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
-							</div>
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-eye2"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Retina Ready</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
+
+							<div class = "choice">
+							  <div >
+							    <div class = "choice-name">Food Restrictions</div>
+							  </div>
+							    <input id="celiac" type="checkbox" name="restriction" value="celiac">
+							    <label for="celiac">Celiac</label>
+
+							    <input id="nuts" type="checkbox" name="restriction" value="nuts">
+							    <label for="nuts">Nuts</label>
+
+							    <input id="vegan" type="checkbox" name="restriction" value="vegan">
+							    <label for="vegan">Vegan</label>
+							    <p class = "i"><I> We provide gluten free and nut free options, however we are not a gluten or nut free facility.</I></p>
+							  </div>
+
+							<div class = "choice">
+							  <div class = "choice-name">Select your bread:</div>
+
+							  <input id="white" type="radio" name="bread" value="white">
+							  <label for="white">White</label>
+
+							  <input id="wheat" type="radio" name="bread" value="wheat">
+							  <label for="wheat">Wheat(organic)</label>
+
+							  <input id="multi-grain" type="radio" name="bread" value="multi-grain">
+							  <label for="multi_grain">Multi-Grain(organic)</label>
+
+							  <input id="wheat-tortilla" type="radio" name="bread" value="wheat-tortilla">
+							  <label for="wheat-tortilla">Wheat Tortilla</label>
+
+							  <input id="sourdough" type="radio" name="bread" value="sourdough">
+							  <label for="multi_grain">Sourdough</label>
+
+							  <input id="rye" type="radio" name="bread" value="rye">
+							  <label for="rye">Rye</label>
+
+							  <input id="Gluten-Free-Bread" type="radio" name="bread" value="Gluten-Free-Bread">
+							  <label for="rye">Gluten-Free-Bread(+.65)</label>
+
+
 							</div>
 
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-monitor"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Fully Responsive</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
+							<div class = "choice-line">
+							  <div class = "choice-name">Grilled Sandwiches:</div>
+							  <label>
+							    <input type="checkbox" id="sandwich-special" name="sandwich-special" />
+							    Sandwich
+							</label>
+							<label>
+							    <input type="checkbox" id="chicken-basil-binary" name="chicken-basil-binary" />
+							    Chicken Basil Binary: <span class="description">Provolone, tomato, pesto+chicken</span>
+							</label>
+							<label>
+							    <input type="checkbox" id="tuna++" name="tuna++" />
+							    Tuna ++: <span class="description">tuna, cheddar, tomato+onion
+							</label>
+
+							<label>
+							    <input type="checkbox" id="telsa-turkey-club" name="telsa-turkey-club" />
+							    Telsa Turkey Club: <span class="description">turkey, cheddar, bacon bits, tomato, peppers + ranch dressing
+							</label>
+
+							<label>
+							    <input type="checkbox" id="gyro" name="gyro" />
+							    Gyro: <span class="description">beef/lamb, tomato, cucumbers, onions + tzatziki sauce on pita bread
+							</label>
+
+							<label>
+							    <input type="checkbox" id="nearly-normal-burger" name="nearly-normal-burger" />
+							    Nearly Normal Burger: <span class="description">Veggie burger, chedar, pickles, onions, tomatoes+lettuce served on a wheat bun
+							</label>
+
 							</div>
 
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-cog2"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Intuitive</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
+							<div class = "choice-line">
+							  <div class = "choice-name">Cold Sandwiches:</div>
+							  <label>
+							    <input type="checkbox" id="veggie" name="veggie" />
+							    Veggie: <span class="description">hummus, provolone, peperoncini, olives,tomatoes, onions, cucumbers, lettuce + bell peppers</span>
+							</label>
+							<label>
+							    <input type="checkbox" id="egg-salad" name="egg-salad" />
+							    Egg Salad: <span class="description">fresh egg salad, cheddar + lettuce</span>
+							</label>
+							<label>
+							    <input type="checkbox" id="tuna" name="tuna" />
+							    Tuna: <span class="description">tuna, Provolone, tomato, onion+lettuce</span>
+							</label>
+
 							</div>
 
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-paragraph"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Typography</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
-							</div>
-							<div class="col-md-4 col-sm-6 fh5co-feature text-center">
-								<span class="fh5co-feature-icon">
-									<i class="icon-box2"></i>
-								</span>
-								<h3 class="fh5co-feature-title">Out of the Box</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores saepe, sunt eos necessitatibus consectetur.</p>
+							<div class = "choice-line">
+							  <div class = "choice-name">Specialty Salads</div>
+							  <label>
+							    <input type="checkbox" id="salad-special" name="salad-special" />
+							    Salad Special
+							</label>
+							<label>
+							    <input type="checkbox" id="telesa-turkey-salad" name="telesa-turkey-salad" />
+							    Tesla Turkey Salad: <span class="description">Spring mix, bacon bits, cheddar, tomatos, bell peppers + ranch dressing</span>
+							</label>
+							<label>
+							    <input type="checkbox" id="chicken-spring-caesar" name="chicken-spring-caesar" />
+							    Chicken Spring Caesar: <span class="description">Spring mix, parmesan, onion, tomatoes, croutons, caesar dressing + chicken</span>
+							</label>
+
 							</div>
 
-						</div>
+							<div class = "choice">
+							  <div class = "choice-name">Grilled Cheese</div>
+							  <label>
+							    <input type="checkbox" id="grilled-cheese" name="grilled-cheese" />
+							    grilled-cheese
+							</label>
+							<label>
+							    <input type="checkbox" id="grilled-cheese-meat" name="grilled-cheese-meat" />
+							    Grilled Cheese + Meat
+							</label>
+								<div class = "choice-name">PB+J</div>
+								<label>
+							    <input type="checkbox" id="peanut-butter-jelly" name="peanut-butter-jelly" />
+							    Peanut Butter + Jelly
+							</label>
+							<label>
+							    <input type="checkbox" id="peanut-butter-honey-banana" name="peanut-butter-honey-banana" />
+							    Peanut Butter, Honey + Banana
+							</label>
+		
+							<div>
+							  
+							  <input id="white" type="radio" name="meat" value="turkey">
+							  <label for="white">Turkey</label>
+
+							  <input id="wheat" type="radio" name="meat" value="tuna">
+							  <label for="wheat">Tuna</label>
+
+							  <input id="multi-grain" type="radio" name="meat" value="ham">
+							  <label for="multi_grain">Ham</label>
+
+							</div> 
+						   </div>
+
+						   <!-- <div class = "inline-choice-continer"> -->
+							<div class = "choice">
+							   	<span class = "inline-choice">
+								  <div class = "choice-name">Pickle Spear</div>
+								  <input id="pickle-spear-yes" type="radio" name="pickle-spear" value="pickle-spear-yes">
+								  <label for="pickle-spear">Yes</label>
+
+
+								  <input id="pickle-spear-no" type="radio" name="pickle-spear" value="pickle-spear-no">
+								  <label for="pickle-spear">No</label>
+								</span>  
+
+								<span class = "inline-choice">
+
+								  <div class = "choice-name">Soup</div>
+								  <input id="soup-cup" type="radio" name="soup" value="soup-cup">
+								  <label for="soup">Cup</label>
+
+								  <input id="soup-bowl" type="radio" name="soup" value="soup-bowl">
+								  <label for="soup">Bowl</label>
+								</span>
+
+								<div class = "inline-choice">
+
+								  <div class = "choice-name">Mac & Cheese</div>
+								  <input id="mac-cheese-cup" type="radio" name="mac-cheese" value="mac-cheese-cup">
+								  <label for="soup">Cup</label>
+
+								  <input id="mac-cheese-bowl" type="radio" name="mac-cheese" value="mac-cheese-bowl">
+								  <label for="soup">Bowl</label>
+								</div>							
+							</div>
+
+							</form>
+							</div>
 					</div>
 				</div>
 				<!-- Features -->
-
-				<!-- <div class="fh5co-spacer fh5co-spacer-lg"></div> -->
-				
-				<!-- Section Half -->
-			<!-- 	<div class="fh5co-half">
-					<div class="fh5co-half-img fh5co-50" style="background-image: url(images/slide_2.jpg)"></div>
-					<div class="fh5co-half-text fh5co-50 fh5co-right">
-						<div class="fh5co-text">
-							
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-md-9 col-md-push-1 col-sm-9 col-sm-push-1">
-										<div class="fh5co-section-title text-left">
-											<h2 class="fh5co-title">Clean &amp; Minimal Design</h2>
-										</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa doloribus molestias, explicabo itaque, quos consequatur quam, tempore enim voluptatum nulla quas iusto voluptate quae modi commodi maiores voluptatibus perspiciatis aut.</p>		
-										<div class="fh5co-spacer fh5co-spacer-xxs"></div>
-										<p><a href="#" class="btn btn-primary btn-md fh5co-btn-other-option">Get Started</a> <span class="fh5co-other-option"><span class="fh5co-or text-muted">or</span> <a href="#" class="btn-link">Learn More</a></span></p>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div> -->
-				<!-- Section Half -->
-
-				<div class="fh5co-spacer fh5co-spacer-lg"></div>
-				
-				<!-- Testimonial -->
-				<!-- <div class="container">
-						<div class="fh5co-section-title text-center">
-							<h2 class="fh5co-title">Our Clients Say</h2>
-						</div>
-						<br class="fh5co-spacer fh5co-spacer-sm">
-						<div class="owl-carousel-fullwidth">
-							<div class="item">
-								<p class="text-center quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained. &rdquo; <cite class="author">&mdash; Ferdinand A. Porsche</cite></p>
-							</div>
-							<div class="item">
-								<p class="text-center quote">&ldquo;Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while. &rdquo;<cite class="author">&mdash; Steve Jobs</cite></p>
-							</div>
-							<div class="item">
-								<p class="text-center quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly. &rdquo;<cite class="author">&mdash; Frank Chimero</cite></p>
-							</div>
-						</div>
-				</div> -->
-				<!-- Testimonial -->
-
-				<div class="fh5co-spacer fh5co-spacer-lg"></div>
-
-				<!-- Press -->
-			<!-- <div class="fh5co-press">
-					<div class="container">
-
-						<div class="fh5co-section-title text-center">
-							<h2 class="fh5co-title">Press</h2>
-						</div>
-						<div class="fh5co-spacer fh5co-spacer-sm"></div>
-						<div class="row">
-
-							<div class="col-md-6">
-								<!Press Item -->
-						<!-- 		<div class="fh5co-press-item">
-									<div class="fh5co-press-img" style="background-image: url(images/slide_2.jpg)">
-									</div>
-									<div class="fh5co-press-text">
-										<h3 class="h2 fh5co-press-title">Simplicity <span class="fh5co-border"></span></h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-									</div>
-								</div> -->
-								<!-- Press Item -->
-							<!-- </div> --> 
-
-						<!-- 	<div class="col-md-6"> -->
-								<!-- Press Item -->
-								<!-- <div class="fh5co-press-item">
-									<div class="fh5co-press-img" style="background-image: url(images/slide_1.jpg)">
-									</div>
-									<div class="fh5co-press-text">
-										<h3 class="h2 fh5co-press-title">Versatile <span class="fh5co-border"></span></h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-									</div>
-								</div> -->
-								<!-- Press Item -->
-							<!-- </div> -->
-							<!-- 
-							<div class="col-md-6">
-								
-								<div class="fh5co-press-item">
-									<div class="fh5co-press-img" style="background-image: url(images/slide_3.jpg);">
-									</div>
-									<div class="fh5co-press-text">
-										<h3 class="h2 fh5co-press-title">Aesthetic <span class="fh5co-border"></span></h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-									</div>
-								</div>
-								
-							</div>
-
-							<div class="col-md-6">
-								
-								<div class="fh5co-press-item">
-									<div class="fh5co-press-img" style="background-image: url(images/slide_4.jpg);">
-									</div>
-									<div class="fh5co-press-text">
-										<h3 class="h2 fh5co-press-title">Creative <span class="fh5co-border"></span></h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-									</div>
-								</div>
-								
-							</div>
-
-						</div> -->
-				<!-- 		<div class="fh5co-spacer fh5co-spacer-xs"></div>
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3">
-								<a href="#" class="btn btn-outline btn-md btn-block">View All Press Releases</a>
-							</div>
-						</div>
-						
-
-
-					</div>
-				</div> -->
-				<!-- Press -->
 				
 
 		</main>
@@ -362,6 +381,9 @@
 		<script src="js/velocity.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		<!-- JS for login -->
+		<script src="js/userLogin.js"></script>
+
 
 	</body>
 </html>
