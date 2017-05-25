@@ -44,7 +44,7 @@
 	<link rel="stylesheet" href="css/easy-responsive-tabs.css">
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="css/login-style.css">
 	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -116,7 +116,7 @@
 					</li>
 
 					<li>
-					<a href="">Log in</a> 
+						<button  id="popUp-login-box">Log in</button> 
 					</li>
 						
 					
@@ -127,6 +127,35 @@
 		</header>
 		<!-- Header -->
 		
+
+		<!-- user login part -->
+		<div id="user-login-box" class = "hidden">
+				<div >
+					<img src="images/osuBeavers.jpg" class="login-beaver-image"><p class="user-login-greeting">Login Beavers!</p>
+				</div>
+				<button type="button" id="login-close-button">&times;</button>
+				<div class="user-input-forms">
+					<form action="" method="get" name="register">
+						<input name="fullname" type="text" value="Enter your OSU ID..."  onClick="border: 1px solid #30a8da;" id="username"/>
+						<input name="email" type="text" value="Enter your email address..."  onClick="border: 1px solid #30a8da;" id="mail"/>
+						<input name="password" type="password" value="Enter a password..." onClick="border: 1px solid #30a8da;" id="password"/>
+					</form>
+				</div>
+
+				<button class="create-account user-lonin-button" >Create Account</button>
+				<button class="login-account user-lonin-button" >Login</button>
+		</div>
+		<!-- end of user login part -->
+			
+		<!-- Order food part -->
+		<button type="button" id="create-order-button">
+				<p id="create-order-icon"><i class="fa fa-cutlery"></i></p>
+				<a href="" id="order-meal">Order</a>
+
+		</button>
+		<!-- end of Order food part -->
+
+
 		<!-- Main -->
 		<main role="main">
 
@@ -386,6 +415,8 @@
 		<script src="js/velocity.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		<!-- JS for login -->
+		<script src="js/userLogin.js"></script>
 
 	</body>
 </html>
