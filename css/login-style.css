@@ -208,5 +208,14 @@
   /*outline: none;*/
 }
 
-
+#popUp-login-box{
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2e2e2e;
+  padding: 4px 10px;
+}
 
