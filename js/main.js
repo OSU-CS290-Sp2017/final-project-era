@@ -115,31 +115,46 @@
 	var owlCrouselFeatureSlide = function() {
 		var owl = $('.owl-carousel');
 		owl.owlCarousel({
-			items: 1,
-		    loop: true,
-		    margin: 0,
-		    responsiveClass: true,
-		    nav: true,
-		    dots: true,
-		    smartSpeed: 500,
-		    navText: [
-		      "<i class='ti-arrow-down owl-direction'></i>",
-		      "<i class='ti-arrow-up owl-direction'></i>"
-	     	]
+			// items: 1,
+		 //    loop: true,
+		 //    margin: 0,
+		 //    responsiveClass: true,
+		 //    nav: false,
+		 //    dots: false,
+		 //    // smartSpeed: 10000,
+		 nav: false,
+		 dots: false,
+		 items:1,
+	    loop:true,
+	    margin:0,
+	    autoplay:true,
+	    autoplayTimeout:1000,
+	    autoplayHoverPause:true,
+	    smartSpeed: 5000
+		  
 		});
 	};
 
 	var testimonialCarousel = function(){
 		var owl = $('.owl-carousel-fullwidth');
 		owl.owlCarousel({
-			items: 1,
-		    loop: true,
-		    margin: 0,
-		    responsiveClass: true,
-		    nav: false,
-		    dots: true,
-		    smartSpeed: 500,
-		    autoHeight: true
+			// items: 3,
+		 //    loop: true,
+		 //    margin: 0,
+		 //    responsiveClass: true,
+		 //    nav: false,
+		 //    dots: false,
+		 //    // smartSpeed: 10000,
+		 //    autoHeight: true
+		 nav: false,
+		 dots: false,
+		items:1,
+	    loop:true,
+	    margin:0,
+	    autoplay:true,
+	    autoplayTimeout:1000,
+	    autoplayHoverPause:true,
+	    smartSpeed: 5000
 		});
 	};
 
@@ -148,7 +163,7 @@
 		$('.image-popup').magnificPopup({
 			type: 'image',
 		  gallery:{
-		    enabled:true
+		    enabled:true,
 		  }
 		});
 	};

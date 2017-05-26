@@ -1289,3 +1289,13 @@ a > img.fh5co-align-center {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#osu-hat{
+  height: 60px;
+  background-color: #dc4405;
+}
+
+.osu-hat-class{
+  height: 60px;
+  float:left;
+}
