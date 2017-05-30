@@ -21,3 +21,6 @@ function closeLoginPanel(event){
 	addLoginContainer.classList.add("hidden");
 }
 closeLoginPanelButton.addEventListener('click', closeLoginPanel);
+
+
+
