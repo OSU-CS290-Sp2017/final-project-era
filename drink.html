@@ -47,7 +47,8 @@
 	<link rel="stylesheet" href="css/check.css">
 		<!-- Login Style -->
 	<link rel="stylesheet" href="css/login-style.css">
-
+	<!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
 	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -158,14 +159,16 @@
 			
 		<!-- Order food part -->
 		<button type="button" id="create-order-button">
-				<p id="create-order-icon"><i class="fa fa-cutlery"></i></p>
-				<a href="" id="order-meal">Order</a>
+				<i id="create-order-icon" class="fa fa-cart-plus" aria-hidden="true"></i>
+				<p id="order-meal">Order</p>
 
+				<!-- <div id="create-order-icon">
+					<i class="fa fa-cart-plus" aria-hidden="true"></i>
+					<p id="order-meal">Order</p>
+				</div> -->
+				
 		</button>
 		<!-- end of Order food part -->
-
-
-
 		
 		<main role="main">
 
@@ -193,15 +196,15 @@
 									<td>Coffee
 									</td>
 									<td>
-										<input id="hotDrink-coffee-12" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-coffee-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.80
 									</td>
 									<td>
-										<input id="hotDrink-coffee-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-coffee-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.10
 									</td>
 									<td>
-										<input id="hotDrink-coffee-20" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-coffee-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.35
 									</td>
 								</tr>
@@ -209,14 +212,14 @@
 								<tr class="drinks-row">
 									<td>Espresso</td>
 									<td>
-										<input id="hotDrink-espresso-1" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-espresso-1" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										0.85, 1 shot
 									</td>
 									<td>
 										
 									</td>
 									<td>
-										<input id="hotDrink-espresso-2" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-espresso-2" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.70, 2 shot
 									</td>
 									
@@ -225,142 +228,142 @@
 								<tr class="drinks-row">
 									<td>Shot in the Dark</td>
 									<td>
-										<input id="hotDrink-ShotInTheDark-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
-									</td>
-									<td>
-										<input id="hotDrink-ShotInTheDark-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
-									</td>
-									<td>
-										<input id="hotDrink-ShotInTheDark-20" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="hotDrink-ShotInTheDark-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.35
+									</td>
+									<td>
+										<input id="hotDrink-ShotInTheDark-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.95
+									</td>
+									<td>
+										<input id="hotDrink-ShotInTheDark-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.45
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td>White Mocha</td>
 									<td>
-										<input id="hotDrink-WhiteMocha-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-WhiteMocha-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.80
 									</td>
 									<td>
-										<input id="hotDrink-WhiteMocha-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-WhiteMocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.40
 									</td>
 									<td>
-										<input id="hotDrink-WhiteMocha-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-WhiteMocha-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.75
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Mexican Mocha</td>
 									<td>
-										<input id="hotDrink-MexicanMocha-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-MexicanMocha-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.80
 									</td>
 									<td>
-										<input id="hotDrink-MexicanMocha-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-MexicanMocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.40
 									</td>
 									<td>
-										<input id="hotDrink-MexicanMocha-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-MexicanMocha-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.75
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td>Steamer</td>
 									<td>
-										<input id="hotDrink-Steamer-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-Steamer-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.25
 									</td>
 									<td>
-										<input id="hotDrink-Steamer-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-Steamer-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.75
 									</td>
 									<td>
-										<input id="hotDrink-Steamer-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-Steamer-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.25
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Cafe au Lait</td>
 									<td>
-										<input id="hotDrink-CafeAuLait-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-CafeAuLait-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.25
 									</td>
 									<td>
-										<input id="hotDrink-CafeAuLait-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-CafeAuLait-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.50
 									</td>
 									<td>
-										<input id="hotDrink-CafeAuLait-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-CafeAuLait-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.00
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Cafe Mocha</td>
 									<td>
-										<input id="hotDrink-CafeMocha-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-CafeMocha-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.75
 									</td>
 									<td>
-										<input id="hotDrink-CafeMocha-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-CafeMocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.00
 									</td>
 									<td>
-										<input id="hotDrink-CafeMocha-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-CafeMocha-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.50
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Chai</td>
 									<td>
-										<input id="hotDrink-Chai-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-Chai-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.10
 									</td>
 									<td>
-										<input id="hotDrink-Chai-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-Chai-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.65
 									</td>
 									<td>
-										<input id="hotDrink-Chai-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-Chai-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.20
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Hot Chocolate</td>
 									<td>
-										<input id="hotDrink-HotChocolate-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-HotChocolate-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.45
 									</td>
 									<td>
-										<input id="hotDrink-HotChocolate-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-HotChocolate-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.95
 									</td>
 									<td>
-										<input id="hotDrink-HotChocolate-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-HotChocolate-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.30
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Tea</td>
 									<td>
-										<input id="hotDrink-Tea-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-Tea-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.00
 									</td>
 									<td>
-										<input id="hotDrink-Tea-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-Tea-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.00
 									</td>
 									<td>
-										<input id="hotDrink-Tea-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-Tea-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.00
 									</td>
 								</tr>
 
@@ -368,48 +371,48 @@
 								<tr class="drinks-row">
 									<td>Yerba Mate</td>
 									<td>
-										<input id="hotDrink-YerbaMate-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-YerbaMate-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.75
 									</td>
 									<td>
-										<input id="hotDrink-YerbaMate-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-YerbaMate-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.00
 									</td>
 									<td>
-										<input id="hotDrink-YerbaMate-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-YerbaMate-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.25
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>Hot Cider</td>
 									<td>
-										<input id="hotDrink-HotCider-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-HotCider-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.75
 									</td>
 									<td>
-										<input id="hotDrink-HotCider-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-HotCider-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.30
 									</td>
 									<td>
-										<input id="hotDrink-HotCider-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-HotCider-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										4.00
 									</td>
 								</tr>
 
 								<tr class="drinks-row">
 									<td>London Fog</td>
 									<td>
-										<input id="hotDrink-LondonFog-12" type="radio" name="restriction" value="" class="drinks-size">
-										1.80
+										<input id="hotDrink-LondonFog-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.25
 									</td>
 									<td>
-										<input id="hotDrink-LondonFog-16" type="radio" name="restriction" value="" class="drinks-size">
-										2.10
+										<input id="hotDrink-LondonFog-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.50
 									</td>
 									<td>
-										<input id="hotDrink-LondonFog-20" type="radio" name="restriction" value="" class="drinks-size">
-										2.35
+										<input id="hotDrink-LondonFog-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										3.00
 									</td>
 								</tr>
 
@@ -429,22 +432,22 @@
 								<tr class="drinks-row">
 									<td>Coffee</td>
 									<td>
-										<input id="icedDrink-coffee-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-coffee-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.80
 									</td>
 									<td>
-										<input id="icedDrink-coffee-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-coffee-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.35
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td>Latte</td>
 									<td>
-										<input id="icedDrink-Latte-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Latte-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.90
 									</td>
 									<td>
-										<input id="icedDrink-Latte-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Latte-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										4.10
 									</td>
 								</tr>
@@ -452,11 +455,11 @@
 								<tr class="drinks-row">
 									<td>Mocha</td>
 									<td>
-										<input id="icedDrink-Mocha-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Mocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.30
 									</td>
 									<td>
-										<input id="icedDrink-Mocha-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Mocha-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										4.50
 									</td>
 								</tr>
@@ -464,11 +467,11 @@
 								<tr class="drinks-row">
 									<td>White Mocha</td>
 									<td>
-										<input id="icedDrink-WhiteMocha-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-WhiteMocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.80
 									</td>
 									<td>
-										<input id="icedDrink-WhiteMocha-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-WhiteMocha-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										4.75
 									</td>
 								</tr>
@@ -476,11 +479,11 @@
 								<tr class="drinks-row">
 									<td>Mexican Mocha</td>
 									<td>
-										<input id="icedDrink-MexicanMocha-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-MexicanMocha-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.80
 									</td>
 									<td>
-										<input id="icedDrink-MexicanMocha-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-MexicanMocha-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										4.75
 									</td>
 								</tr>
@@ -488,11 +491,11 @@
 								<tr class="drinks-row">
 									<td>Milk</td>
 									<td>
-										<input id="icedDrink-Milk-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Milk-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.60
 									</td>
 									<td>
-										<input id="icedDrink-Milk-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Milk-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.40
 									</td>
 								</tr>
@@ -500,11 +503,11 @@
 								<tr class="drinks-row">
 									<td>Iced Tea</td>
 									<td>
-										<input id="icedDrink-IcedTea-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-IcedTea-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.25
 									</td>
 									<td>
-										<input id="icedDrink-IcedTea-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-IcedTea-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.25
 									</td>
 								</tr>
@@ -512,11 +515,11 @@
 								<tr class="drinks-row">
 									<td>Italian Soda</td>
 									<td>
-										<input id="icedDrink-ItalianSoda-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-ItalianSoda-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.00
 									</td>
 									<td>
-										<input id="icedDrink-ItalianSoda-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-ItalianSoda-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										2.60
 									</td>
 								</tr>
@@ -524,11 +527,11 @@
 								<tr class="drinks-row">
 									<td>Chai</td>
 									<td>
-										<input id="icedDrink-Chai-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Chai-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.10
 									</td>
 									<td>
-										<input id="icedDrink-Chai-24" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="icedDrink-Chai-24" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										4.20
 									</td>
 								</tr>
@@ -548,7 +551,7 @@
 								<tr class="drinks-row">
 									<td>Bottle Soda</td>
 									<td>
-										<input id="codeDrink-BottleSoda-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="codeDrink-BottleSoda-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.65
 									</td>
 								</tr>
@@ -556,7 +559,7 @@
 								<tr class="drinks-row">
 									<td>Bottle Water</td>
 									<td>
-										<input id="codeDrink-BottleWater-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="codeDrink-BottleWater-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.60
 									</td>
 								</tr>
@@ -564,7 +567,7 @@
 								<tr class="drinks-row">
 									<td>Odwalla</td>
 									<td>
-										<input id="codeDrink-Odwalla-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="codeDrink-Odwalla-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.40
 									</td>
 								</tr>
@@ -572,7 +575,7 @@
 								<tr class="drinks-row">
 									<td>Ocean Spray Juice</td>
 									<td>
-										<input id="codeDrink-OceanSprayJuice-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="codeDrink-OceanSprayJuice-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										1.90
 									</td>
 								</tr>
@@ -580,8 +583,40 @@
 								<tr class="drinks-row">
 									<td>Rockstar</td>
 									<td>
-										<input id="codeDrink-Rockstar-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="codeDrink-Rockstar-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										3.30
+									</td>
+								</tr>
+
+								<tr class="drinks-row">
+									<td>Kickstarter</td>
+									<td>
+										<input id="codeDrink-Kickstarter-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.55
+									</td>
+								</tr>
+
+								<tr class="drinks-row">
+									<td>Pure Leaf Tea</td>
+									<td>
+										<input id="codeDrink-PureLeafTea-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										2.25
+									</td>
+								</tr>
+
+								<tr class="drinks-row">
+									<td>Chocolate Milk</td>
+									<td>
+										<input id="codeDrink-ChocolateMilk-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.65
+									</td>
+								</tr>
+
+								<tr class="drinks-row">
+									<td>Gatorade</td>
+									<td>
+										<input id="codeDrink-Gatorade-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
+										1.65
 									</td>
 								</tr>
 
@@ -602,42 +637,42 @@
 								<tr class="drinks-row">
 									<td>Milk Alternatives</td>
 									<td>
-										<input id="drinkExtra-MilkAlternatives" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-MilkAlternatives" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										0.75
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td rowspan="3">Syrup Flavors</td>
 									<td>
-										<input id="drinkExtra-SyrupFlavors-12" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-SyrupFlavors-12" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										12oz . 0.50
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<!-- <td>Milk Alternatives</td> -->
 									<td>
-										<input id="drinkExtra-SyrupFlavors-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-SyrupFlavors-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										16oz . 0.75
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<!-- <td>Milk Alternatives</td> -->
 									<td>
-										<input id="drinkExtra-SyrupFlavors-20" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-SyrupFlavors-20" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										20oz . 1.00
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td>Whipped Cream</td>
 									<td>
-										<input id="drinkExtra-WhippedCream-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-WhippedCream-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										0.40
 									</td>
 								</tr>
 								<tr class="drinks-row">
 									<td>Extra Shot</td>
 									<td>
-										<input id="drinkExtra-ExtraShot-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-ExtraShot-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										0.90
 									</td>
 								</tr>
@@ -645,7 +680,7 @@
 								<tr class="drinks-row">
 									<td>Breve</td>
 									<td>
-										<input id="drinkExtra-Breve-16" type="radio" name="restriction" value="" class="drinks-size">
+										<input id="drinkExtra-Breve-16" type="radio" name="drinkSelectRadioButtons" value="" class="drinks-size">
 										0.55
 									</td>
 								</tr>
@@ -706,7 +741,8 @@
 		<script src="js/main.js"></script>
 		<!-- JS for login -->
 		<script src="js/userLogin.js"></script>
-
+		<!-- JS for order drink -->
+		<script src="js/orderDrink.js"></script>
 
 	</body>
 </html>

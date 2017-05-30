@@ -47,7 +47,8 @@
 	<link rel="stylesheet" href="css/check.css">
 		<!-- Login Style -->
 	<link rel="stylesheet" href="css/login-style.css">
-
+	<!-- This is a 3rd-party stylesheet for Font Awesome: http://fontawesome.io/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
 	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
@@ -158,9 +159,14 @@
 			
 		<!-- Order food part -->
 		<button type="button" id="create-order-button">
-				<p id="create-order-icon"><i class="fa fa-cutlery"></i></p>
-				<a href="" id="order-meal">Order</a>
+				<i id="create-order-icon" class="fa fa-cart-plus" aria-hidden="true"></i>
+				<p id="order-meal">Order</p>
 
+				<!-- <div id="create-order-icon">
+					<i class="fa fa-cart-plus" aria-hidden="true"></i>
+					<p id="order-meal">Order</p>
+				</div> -->
+				
 		</button>
 		<!-- end of Order food part -->
 

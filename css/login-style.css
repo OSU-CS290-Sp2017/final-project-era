@@ -174,11 +174,11 @@
   position: fixed;
   right: 30px;
   bottom: 400px;
-  height: 100px;
-  width: 100px;
+  height: 6em;
+  width: 6em;
   border: none;
-  border-radius: 30px;
-  font-size: 20px;
+  border-radius: 20%;
+  /*font-size: 6vw;*/
   background-color: gray;
   color: #fff;
   cursor: pointer;
@@ -186,27 +186,36 @@
 }
 
 #create-order-icon{
+  display: inline-block;
+  /*position: fixed;*/
+  top: 5%;
+  height: 60%;
+  width: 100%;
   margin: 0 0 0 0;
-  font-size: 48px;
+  border-radius: 30px;
+  color: white;
+  background-color: gray;
+  font-size: 4em;
 }
+
 
 #order-meal{
   padding-top: 0px;
   margin-top: 0px
-  font-size: 48px;
+  font-size: 6em;
+  font-weight: bold;
 }
 #create-order-button:hover,
 #create-order-button:focus {
   
   /*border-radius: 33px;*/
-  font-size: 20px;
-  color:green;
-  background-color: rgba(68, 136, 38, 1);
+  font-size: 105%;
+  color:lightgreen;
+  /*background-color: rgba(68, 136, 38, 1);*/
+
 }
 
-#create-order-button:focus {
-  /*outline: none;*/
-}
+
 
 #popUp-login-box{
   background-color: rgba(0,0,0,0);
