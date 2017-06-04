@@ -1,0 +1,25 @@
+{
+  "title": "food price ", //相册标题
+  "id": 123, //相册id
+  "start": 0, //初始显示的图片序号，默认0
+  "data": [   //相册包含的图片，数组格式
+    {
+      "alt": "food list",
+      "pid": 1, //图片id
+      "src": "https://en.wikipedia.org/wiki/Food#/media/File:Good_Food_Display_-_NCI_Visuals_Online.jpg" //原图地址
+      //"thumb": "" //缩略图地址
+    },
+    {
+      "alt": "food list",
+      "pid": 2, //图片id
+      "src": "https://en.wikipedia.org/wiki/Food#/media/File:Good_Food_Display_-_NCI_Visuals_Online.jpg" //原图地址
+      //"thumb": "" //缩略图地址
+    },
+    {
+      "alt": "food list",
+      "pid": 3, //图片id
+      "src": "https://en.wikipedia.org/wiki/Food#/media/File:Good_Food_Display_-_NCI_Visuals_Online.jpg" //原图地址
+      //"thumb": "" //缩略图地址
+    }
+  ]
+}

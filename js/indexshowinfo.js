@@ -28,18 +28,75 @@ function PopupCenter(url, title, w, h) {
 
 
 var showPriceList = function(){
-		var iframe = document.createElement('iframe');
-		iframe.src = 'http://google.com';
-		document.body.appendChild(iframe);
-		alert('you click');
-		console.log('hello');
-		PopupCenter('http://www.google.com','xtf','900','500');  
+        // layer.open({
+        //   title: 'price list',
+        //   type: 1,
+        //   skin: 'layui-layer-rim', //加上边框
+        //   area: ['420px', '240px'], //宽高
+        //   content: '价格内容'
+        // });
+        console.log("start");
+        // $.prompt('success');
+        // $.getJSON('js/indexinfo/pricelist.json', function(json){
+        //   console.log("in json");
+        //   console.log(json);
+        //   layer.photos({
+        //     photos: json //格式见API文档手册页
+        //     ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+        //   });
+        // }); 
+
+        // layer.photos({
+        //   photos: '#layer-photos',
+        //   anim: 0 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+        // });         
+
+        layer.open({
+          type: 1,
+          title: false,
+          closeBtn: 0,
+          area: '1000px',
+          skin: 'layui-layer-nobg', //没有背景色
+          shadeClose: true,
+          content: $('#layer-photos')
+        });
+
+
+
+        console.log("end");       
 	}
 
+var showInfo = function(){
+    layer.open({
+          title: ' ',
+          type: 1,
+          skin: 'layui-layer-rim', //加上边框
+          area: ['420px', '240px'], //宽高
+          content: 'Located in the Kelley Engineering Center, e.Cafe offers a wide range of dietary sensitive food, from Vegan to Vegetarian and Gluten Free. We offer Portland Roasting beans, as well as Pepsi products. You can also find a selection of fruits and veggies and pastries at our front counter.'
+        });
+}
+
+
+var showTeam = function(){
+    layer.open({
+      type: 2,
+      title: false,
+      closeBtn: 0,
+      shadeClose: true,
+      area: ['90%','50%'],
+
+      content: 'teammember.html',
+    });
+}
+
+
 var price_list_button = document.getElementById('price-list-button');
-console.log(price_list_button);
 price_list_button.addEventListener('click',showPriceList);
 
+var about_ecafe_button = document.getElementById('about-ecafe-button');
+about_ecafe_button.addEventListener('click',showInfo);
 
+var development_team_button = document.getElementById('development-team-button');
+development_team_button.addEventListener('click',showTeam);
 
 	

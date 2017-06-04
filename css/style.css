@@ -1295,7 +1295,36 @@ a > img.fh5co-align-center {
   background-color: #dc4405;
 }
 
+#price-list-button{
+border: none;
+background-color: #ffffff;
+}
+
+#about-ecafe-button{
+border: none;
+background-color: #ffffff;
+}
+
+#development-team-button{
+border: none;
+background-color: #ffffff;
+}
+
 .osu-hat-class{
   height: 60px;
   float:left;
+}
+
+.layer-photos{
+  display: none;
+}
+
+.teamInfo{
+  max-width:60%;
+max-height:60%;
+}
+
+.teamname{
+  font-size: 30px;
+  font-weight: bold;
 }

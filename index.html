@@ -62,7 +62,7 @@
 		<header id="fh5co-header" role="banner">
 			
 			<!-- Logo -->
-			<div id="fh5co-logo" class="text-center">
+			
 				<!-- <a href="index.html">
 					<img src="images/logo.png">
 				</a> -->
@@ -192,7 +192,7 @@
 								<span class="fh5co-feature-icon">
 									<i class="icon-book"></i>
 								</span>
-								<button id ="about-ecafe" class="fh5co-feature-title">About E.cafe</button> 
+								<button id ="about-ecafe-button" class="fh5co-feature-title">About E.cafe</button> 
 								<p>The information about Nvidia e.cafe </p>
 							</div>
 
@@ -200,7 +200,7 @@
 								<span class="fh5co-feature-icon">
 									<i class="icon-creative-cloud"></i>
 								</span>
-								<button id ="development-team" class="fh5co-feature-title">Development Team</button> 
+								<button id ="development-team-button" class="fh5co-feature-title">Development Team</button> 
 								<p>The info about the development team</p>
 							</div>
 
@@ -212,9 +212,9 @@
 
 
 
-							<iframe src="good_eat.html"  id="iframe-price-list" style="padding:auto;">
+							<!-- <iframe src="good_eat.html"  id="iframe-price-list" style="padding:auto;">
 								<p>iframes are not supported by your browser.</p>
-							</iframe>
+							</iframe> -->
 
 							<!-- <iframe src="good_eat.html" width="400" height="150" id="iframe-about">
 								<p>iframes are not supported by your browser.</p>
@@ -231,10 +231,11 @@
 
 				<!-- Section Half -->
 
-				<div class="fh5co-spacer fh5co-spacer-lg"></div>
-				
-
-				<div class="fh5co-spacer fh5co-spacer-lg"></div>
+				<div id="layer-photos" class="layer-photos">
+				  <img layer-pid="l1" layer-src="images/l1.png" src="images/l1.png" alt="price 1">
+				  <img layer-pid="l2" layer-src="images/l2.png" src="images/l2.png" alt="price 2">
+				  <img layer-pid="l3" layer-src="images/l3.png" src="images/l3.png" alt="price 3">
+				</div>				
 
 
 
@@ -244,7 +245,7 @@
 		<!-- Footer -->
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="container">
-				<div class="fh5co-spacer fh5co-spacer-md"></div>
+			
 				<div class="row">
 					<div class="col-md-6">
 						<p class="fh5co-copyright">&copy; Light 2015. All Rights Reserved.</p>
@@ -285,8 +286,8 @@
 		<!-- JS for login -->
 		<script src="js/userLogin.js"></script>
 		<!-- JS for layer -->
-		<script src="js/layer.js"></script>
-		!-- JS for login -->
+		<script src="layer/layer.js"></script>
+		<!-- JS for login -->
 		<script src="js/indexshowinfo.js"></script>
 
 	</body>
