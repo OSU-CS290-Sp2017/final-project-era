@@ -1,0 +1,146 @@
+{{>header_breakfast_sandwiches_burritos}}
+
+
+
+      <!-- user login part -->
+      <div id="user-login-box" class = "hidden">
+          <div >
+            <img src="images/osuBeavers.jpg" class="login-beaver-image"><p class="user-login-greeting">Login Beavers!</p>
+          </div>
+          <button type="button" id="login-close-button">&times;</button>
+          <div class="user-input-forms">
+            <form action="" method="get" name="register">
+              <input name="fullname" type="text" value="Enter your OSU ID..."  onClick="border: 1px solid #30a8da;" id="username"/>
+              <input name="email" type="text" value="Enter your email address..."  onClick="border: 1px solid #30a8da;" id="mail"/>
+              <input name="password" type="password" value="Enter a password..." onClick="border: 1px solid #30a8da;" id="password"/>
+            </form>
+          </div>
+
+          <button class="create-account user-lonin-button" >Create Account</button>
+          <button class="login-account user-lonin-button" >Login</button>
+      </div>
+      <!-- end of user login part -->
+        
+      <!-- Order food part -->
+      <button type="button" id="create-order-button">
+        <i id="create-order-icon" class="fa fa-cart-plus" aria-hidden="true"></i>
+        <p id="order-meal">Order</p>
+
+        <!-- <div id="create-order-icon">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          <p id="order-meal">Order</p>
+        </div> -->
+        
+    </button>
+      <!-- end of Order food part -->
+
+
+
+
+
+
+
+      <!-- Main -->
+      <main role="main">
+
+
+
+        <!-- Features -->
+        <div class="fh5co-features">
+  	<div class="container">
+  	  <div class="fh5co-section-title text-center">
+  	    <h2 class="fh5co-title">Order your own burritos!</h2>
+  	    </div>
+  	  <div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+  	  <div class = "check_body">
+  	    <form method="post" action="/">
+
+
+  	      <div class = "choice">
+  		  <div >
+  		        <div class = "choice-name">Food Restrictions</div>
+  			  </div>
+  		      <input id="celiac" type="checkbox" name="restriction" value="celiac">
+  		          <label for="celiac">Celiac</label>
+
+  			      <input id="nuts" type="checkbox" name="restriction" value="nuts">
+  			          <label for="nuts">Nuts</label>
+
+  				      <input id="vegan" type="checkbox" name="restriction" value="vegan">
+  				          <label for="vegan">Vegan</label>
+  					      <p class = "i"><I> We provide gluten free and nut free options, however we are not a gluten or nut free facility.</I></p>
+  					        </div>
+
+  	      <div class = "choice">
+  		  <div class = "choice-name">Select your bread:</div>
+
+  		    <input id="english_muffin" type="radio" name="english_muffin" value="english_muffin">
+  		      <label for="english_muffin">English Muffin</label>
+
+  		        <input id="bagel" type="radio" name="bagel" value="bagel">
+  			  <label for="bagel">Bagel <span class="description">(please check supply first in display case)</span></label>
+
+
+
+  					    <input id="Gluten-Free-Bread" type="radio" name="bread" value="Gluten-Free-Bread">
+  					      <label for="rye">Gluten-Free-Bread(+.65)</label>
+
+
+  					      </div>
+
+  	      <div class = "choice-line">
+  		  <div class = "choice-name">Breakfast Burritos:</div>
+  		    <label>
+  		          <input type="checkbox" id="Plain" name="Plain" value="4.00"/>
+  			      Plain<span id="Plain-price">[$4.00]</span>: <span class="description">egg, ham, peppers, cheese + salsa</span>
+  			  </label>
+  		    <label>
+  		          <input type="checkbox" id="Loaded" name="Loaded" value="5.50"/>
+  			      Loaded<span id="Loaded-price">[$5.50]</span>: <span class="description">egg, ham, peppers, cheese, salsa, tomato + onion</span>
+  			  </label>
+  		    <label>
+  		          <input type="checkbox" id="Fiesta" name="Fiesta" value="5.50"/>
+  			      Fiesta<span id="Fiesta-price">[$5.50]</span>: <span class="description">egg, ham, slasa, pepper jack cheese + fiesta bean salad
+  			    </label>
+
+
+
+  		    </div>
+
+          <div class = "choice-line">
+  		  <div class = "choice-name">Breakfast Sandwiches:</div>
+  		    <label>
+  		          <input type="checkbox" id="deli_bagel_sandwich" name="deli_bagel_sandwich" value="4.50"/>
+  			      Deli Bagel Sandwich<span id="deli_bagel_sandwich-price">[$4.50]</span>: <span class="description">ham or turkey, egg patty, + cheddar cheese</span>
+  			  </label>
+  		    <label>
+  		          <input type="checkbox" id="sausage_bagel_sandwich" name="sausage_bagel_sandwich" value="4.50" />
+  			      Sausage Bagel Sandwich<span id="sausage_bagel_sandwich-price">[$4.50]</span>: <span class="description">turkey or chorizo sausage patty, egg patty + cheddar cheese</span>
+  			  </label>
+  		    <label>
+  		          <input type="checkbox" id="breakfast_binary" name="breakfast_binary" value="4.50"/>
+  			      Breakfast Binary<span id="breakfast_binary-price">[$4.50]</span>: <span class="description">Pesto, provolone, + tomato on a bagel or english muffin
+  			    </label>
+
+            <label>
+    		          <input type="checkbox" id="veggie_breakfast_sandwich" name="veggie_breakfast_sandwich" value="4.50"/>
+    			      Veggie Breakfast Sandwich<span id="veggie_breakfast_sandwich-price">[$4.50]</span>: <span class="description">Provolone, cream cheese, hummus, cucumber, tomato, + bell pepper on a bagel or english muffin</span>
+    			  </label>
+    		    <label>
+    		          <input type="checkbox" id="breakfast_pb+j" name="breakfast_pb+j" value="3.50"/>
+    			      Breakfast PB + J<span id="breakfast_pb+j-price">[$3.50]</span>: <span class="description">Peanut Butter + Jelly on a bagel or english muffin</span>
+    			  </label>
+    		    <label>
+    		          <input type="checkbox" id="breakfast_pb" name="breakfast_pb" value="4.50"/>
+    			      Breakfast PB, Honey, Banana <span id="breakfast_pb-price">[$4.50]</span>:<span class="description">on a Bagel or English Muffin</span>
+    			    </label>
+
+
+  </form>
+
+        </main>
+    <!-- Main -->
+
+
+

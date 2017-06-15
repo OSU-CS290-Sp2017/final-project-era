@@ -2,14 +2,28 @@
 
 <main class="chef-page">
 
-  <div class="title-container">
-    <h2>Order List:</h2>
-  </div>
+  	<div class="title-container">
+    	<h2>Order List:</h2>
+  	</div>
 
-  {{#each people}}
-    {{name}}
-    {{OSUid}}
-    {{orders}}
-  {{/each}}
-
+  	<table style="width:100%">
+  		<tr>
+    		<th>Name</th>
+    		<th>OSUid</th>
+    		<th>orders</th>
+    		<th>order time </th>
+    		<th>order finished time </th>
+    		<th>order status </th>
+  		</tr>
+  		{{#each people}}
+  		<tr>
+    		<td>{{name}}</td>
+    		<td>{{OSUid}}</td>
+    		<td>{{orders}}</td>
+    		<td></td>
+    		<td></td>
+    		<td> processing </td>
+  		</tr>
+  		{{/each}}
+	</table>
 </main>

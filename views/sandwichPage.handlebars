@@ -1,0 +1,313 @@
+{{>header_sandwich}}
+
+
+		<!-- user login part -->
+		<div id="user-login-box" class = "hidden">
+				<div >
+					<img src="images/osuBeavers.jpg" class="login-beaver-image"><p class="user-login-greeting">Login Beavers!</p>
+				</div>
+				<button type="button" id="login-close-button">&times;</button>
+				<div class="user-input-forms">
+					<form action="" method="get" name="register">
+						<input name="fullname" type="text" value="Enter your OSU ID..."  onClick="border: 1px solid #30a8da;" id="username"/>
+						<input name="email" type="text" value="Enter your email address..."  onClick="border: 1px solid #30a8da;" id="mail"/>
+						<input name="password" type="password" value="Enter a password..." onClick="border: 1px solid #30a8da;" id="password"/>
+					</form>
+				</div>
+
+				<button class="create-account user-lonin-button" >Create Account</button>
+				<button class="login-account user-lonin-button" >Login</button>
+		</div>
+		<!-- end of user login part -->
+			
+		<!-- Order food part -->
+		<button type="button" id="create-order-button">
+				<i id="create-order-icon" class="fa fa-cart-plus" aria-hidden="true"></i>
+				<p id="order-meal">Order</p>
+
+				<!-- <div id="create-order-icon">
+					<i class="fa fa-cart-plus" aria-hidden="true"></i>
+					<p id="order-meal">Order</p>
+				</div> -->
+				
+		</button>
+		<!-- end of Order food part -->
+
+
+
+		
+		<main role="main">
+
+
+				
+				<!-- Features -->
+				<div class="fh5co-features">
+					<div class="container">
+						<div class="fh5co-section-title text-center">
+							<h2 class="fh5co-title">BUILD YOUR OWN sandwich!</h2>
+						</div>
+						<div class="fh5co-spacer fh5co-spacer-sm"></div>
+						  
+						<div class = "check_body">
+							<form method="post" action="/">
+
+
+							<div class = "choice">
+							  <div >
+							    <div class = "choice-name">Food Restrictions</div>
+							  </div>
+							    <input id="celiac" type="checkbox" name="restriction" value="celiac">
+							    <label for="celiac">Celiac</label>
+
+							    <input id="nuts" type="checkbox" name="restriction" value="nuts">
+							    <label for="nuts">Nuts</label>
+
+							    <input id="vegan" type="checkbox" name="restriction" value="vegan">
+							    <label for="vegan">Vegan</label>
+							    <p class = "i"><I> We provide gluten free and nut free options, however we are not a gluten or nut free facility.</I></p>
+							  </div>
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">Select your bread:</div>
+
+							  <input id="white" type="radio" name="bread" value="white">
+							  <label for="white">White</label>
+
+							  <input id="wheat" type="radio" name="bread" value="wheat">
+							  <label for="wheat">Wheat(organic)</label>
+
+							  <input id="multi-grain" type="radio" name="bread" value="multi-grain">
+							  <label for="multi_grain">Multi-Grain(organic)</label>
+
+							  <input id="wheat-tortilla" type="radio" name="bread" value="wheat-tortilla">
+							  <label for="wheat-tortilla">Wheat Tortilla</label>
+
+							  <input id="sourdough" type="radio" name="bread" value="sourdough">
+							  <label for="multi_grain">Sourdough</label>
+
+							  <input id="rye" type="radio" name="bread" value="rye">
+							  <label for="rye">Rye</label>
+
+							  <input id="Gluten-Free-Bread" type="radio" name="bread" value="Gluten-Free-Bread">
+							  <label for="rye">Gluten-Free-Bread(+.65)</label>
+
+
+							</div> 
+
+
+							<div class = "choice">
+							  <div class = "choice-name">PROTEIN:</div>
+							  <label >
+							    <input type="checkbox" id="sandwich-turkey" name="sandwich-protein" value ="turkey"/>
+							    Turkey
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-chicken" name="sandwich-protein" value ="chicken"/>
+							    Chicken
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-toby's-tofu-contains-eggs" name="sandwich-protein" value ="toby's-tofu-contains-eggs"/>
+							    Toby's Tofu(contains eggs)
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-toby's-tofu-lite-vegan" name="sandwich-protein" value ="toby's-tofu-lite-vegan"/>
+							    Toby's Tofu Lite(Vegan)
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-egg-sandwich" name="sandwich-protein" value ="egg-sandwich"/>
+							    Egg sandwich
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-tuna" name="sandwich-protein" value ="tuna"/>
+							    Tuna
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-hummus" name="sandwich-protein" value ="hummus"/>
+							    Hummus
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-ham" name="sandwich-protein" value ="ham"/>
+							    Ham
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-salami" name="sandwich-protein" value ="salami"/>
+							    Salami
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-bacon-bits" name="sandwich-proteins" value ="bacon-bits"/>
+							    Bacon Bits
+							</label>
+							</div>
+
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">CONDIMENTS:</div>
+							  <label >
+							    <input type="checkbox" id="sandwich-mayo" name="sandwich-produce" value ="mayo"/>
+							    Mayo
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-chipotle-mayo" name="sandwich-produce" value ="chipotle-mayo"/>
+							    Chipotle Mayo
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-mustard" name="sandwich-produce" value ="mustard"/>
+							    Mustard
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-dijon" name="sandwich-produce" value ="dijon"/>
+							    Dijon
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-pesto-mayo" name="sandwich-produce" value ="pesto-mayo"/>
+							    Pesto Mayo
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-honey-mstard" name="sandwich-produce" value ="honey-mstard"/>
+							    Honey Mustard
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-vinaigrette" name="sandwich-produce" value ="vinaigrette"/>
+							    Vinaigrette
+							</label>
+						</div>
+
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">CHEESE:</div>
+							  <label >
+							    <input type="checkbox" id="sandwich-cheddar" name="sandwich-cheese" value ="cheddar"/>
+							    Cheddar
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-swiss" name="sandwich-cheese" value ="swiss "/>
+							    Swiss
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-provolone" name="sandwich-cheese" value ="provolone"/>
+							    Provolone
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-pepper-jack" name="sandwich-cheese" value ="pepper-jack"/>
+							    Pepper Jack
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-feta" name="sandwich-cheese" value ="feta"/>
+							    Feta
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-asiago-romano-parmesean" name="sandwich-cheese" value ="asiago-romano-parmesean"/>
+							    Asiago-Romano-Parmesean
+							</label>
+							</div>
+
+
+
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">TOPPINGS:</div>
+							  <label >
+							    <input type="checkbox" id="sandwich-croutons" name="sandwich-topping" value ="croutons"/>
+							    Croutons
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-sunfflower-seeds" name="sandwich-topping" value ="sunfflower-seeds"/>
+							    Sunfflower Seeds
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-graisins" name="sandwich-topping" value ="graisins"/>
+							    Graisins
+							</label>
+							</div>
+
+
+							<div class = "choice">
+							  <div class = "choice-name">DRESSINGS:</div>
+							  <label >
+							    <input type="checkbox" id="sandwich-ranch" name="sandwich-dressings" value ="ranch"/>
+							    Ranch
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-mustard" name="sandwich-dressings" value ="honey-mustard"/>
+							    Honey Mustard
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-balsamic-vinaigrette" name="sandwich-dressings" value ="balsamic-vinaigrette"/>
+							    Balsamic Vinaigrette
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-caesar" name="sandwich-dressings" value ="caesar"/>
+							    Caesar
+							</label>
+							</div>
+
+							<div class = "choice">
+							  <div class = "choice-name">EXTRAS:</div>
+							<label >
+							    <input type="checkbox" id="sandwich-bellpepper" name="sandwich-extra" value ="guacamole"/>
+							    Guacamole + 1.00
+							</label>
+							<label >
+							    <input type="checkbox" id="sandwich-tomatoes" name="sandwich-extra" value ="extra-protein"/>
+							    Extra Protein + 1.25
+							</label>
+			
+							<label >
+							    <input type="checkbox" id="sandwich-olives" name="sandwich-extra" value ="extra-topping"/>
+							    Extra Topping + .50
+							</label>	
+							</div>
+
+
+							<div class = "choice">
+							   	<span class = "inline-choice">
+								  <div class = "choice-name">Pickle Spear</div>
+								  <input id="sandwich-pickle-spear-yes" type="radio" name="pickle-spear" value="pickle-spear-yes">
+								  <label for="pickle-spear">Yes</label>
+
+
+								  <input id="sandwich-pickle-spear-no" type="radio" name="pickle-spear" value="pickle-spear-no">
+								  <label for="pickle-spear">No</label>
+								</span>  
+
+								<span class = "inline-choice">
+
+								  <div class = "choice-name">Soup</div>
+								  <input id="sandwich-soup-cup" type="radio" name="soup" value="soup-cup">
+								  <label for="soup">Cup</label>
+
+								  <input id="sandwich-soup-bowl" type="radio" name="soup" value="soup-bowl">
+								  <label for="soup">Bowl</label>
+								</span>
+
+								<div class = "inline-choice">
+
+								  <div class = "choice-name">Grill Your Sandwich</div>
+								  <input id="grill-sandwich-yes" type="radio" name="grill" value="grill-sandwich-yes">
+								  <label for="grill">Yes</label>
+
+								  <input id="grill-sandwich-no" type="radio" name="grill" value="grill-sandwich-no">
+								  <label for="grill">No</label>
+								</div>							
+							</div>
+
+							</form>
+							</div>
+					</div>
+				</div>
+				<!-- Features -->
+				
+
+		</main>

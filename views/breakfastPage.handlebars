@@ -1,0 +1,260 @@
+{{>header_breakfast}}
+
+
+
+		<!-- user login part -->
+		<div id="user-login-box" class = "hidden">
+				<div >
+					<img src="images/osuBeavers.jpg" class="login-beaver-image"><p class="user-login-greeting">Login Beavers!</p>
+				</div>
+				<button type="button" id="login-close-button">&times;</button>
+				<div class="user-input-forms">
+					<form action="" method="get" name="register">
+						<input name="fullname" type="text" value="Enter your OSU ID..."  onClick="border: 1px solid #30a8da;" id="username"/>
+						<input name="email" type="text" value="Enter your email address..."  onClick="border: 1px solid #30a8da;" id="mail"/>
+						<input name="password" type="password" value="Enter a password..." onClick="border: 1px solid #30a8da;" id="password"/>
+					</form>
+				</div>
+
+				<button class="create-account user-lonin-button" >Create Account</button>
+				<button class="login-account user-lonin-button" >Login</button>
+		</div>
+		<!-- end of user login part -->
+			
+		<!-- Order food part -->
+		<button type="button" id="create-order-button">
+				<i id="create-order-icon" class="fa fa-cart-plus" aria-hidden="true"></i>
+				<p id="order-meal">Order</p>
+
+				<!-- <div id="create-order-icon">
+					<i class="fa fa-cart-plus" aria-hidden="true"></i>
+					<p id="order-meal">Order</p>
+				</div> -->
+				
+		</button>
+		<!-- end of Order food part -->
+
+		
+
+
+
+		<!-- Main -->
+		<main role="main">
+
+
+				
+				<!-- Features -->
+				<div class="fh5co-features">
+					<div class="container">
+						<div class="fh5co-section-title text-center">
+							<h2 class="fh5co-title">BUILD YOUR OWN breakfast!</h2>
+						</div>
+						<div class="fh5co-spacer fh5co-spacer-sm"></div>
+						  
+						<div class = "check_body">
+							<form method="post" action="/">
+
+
+							<div class = "choice">
+							  <div >
+							    <div class = "choice-name">Food Restrictions</div>
+							  </div>
+							    <input id="celiac" type="checkbox" name="restriction" value="celiac">
+							    <label for="celiac">Celiac</label>
+
+							    <input id="nuts" type="checkbox" name="restriction" value="nuts">
+							    <label for="nuts">Nuts</label>
+
+							    <input id="vegan" type="checkbox" name="restriction" value="vegan">
+							    <label for="vegan">Vegan</label>
+							    <p class = "i"><I> We provide gluten free and nut free options, however we are not a gluten or nut free facility.</I></p>
+							  </div>
+
+							<div class = "choice-line">
+							  <div class = "choice-name">Choose Your Meal</div>
+					
+							<label>
+							    <input type="checkbox" id="breakfast-basic" name="breakfast-basic" />
+							    BASIC<span id="breakfast-basic-price">[$3.25]</span>: <span class="description">1 Protein, 1 Cheese</span>
+							</label>
+							</div>
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">BREAD CHOICES</div>
+							  <label >
+							    <input type="checkbox" id="breakfast-english-muffin" name="breakfast-bread" value ="english-muffin"/>
+							    English Muffin
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-bagel" name="breakfast-breadl" value ="bagel"/>
+							    Bagel 
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-whole-wheat-tortilla" name="breakfast-bread" value ="whole-wheat-tortilla"/>
+							    Whole Wheat Tortilla
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-gluten-free-bread" name="breakfast-bread" value ="gluten-free-bread"/>
+							    Gluten Free Bread(+.65)
+							</label>
+							</div>
+
+
+
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">PROTEIN:</div>
+
+							  <label >
+							    <input type="checkbox" id="breakfast-ham" name="breakfast-protein" value ="ham"/>
+							    Ham
+							  </label>
+							  <label >
+							    <input type="checkbox" id="breakfast-turkey" name="breakfast-protein" value ="turkey"/>
+							    Turkey
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-egg" name="breakfast-protein" value ="egg"/>
+							    Egg
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-turkey-sausage-patty" name="breakfast-protein" value ="turkey-sausage-patty"/>
+							    Turkey Sausage Patty
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-chorizo-sausage-patty" name="breakfast-protein" value ="chorizo-sausage-patty"/>
+							    Chorizo Sausage Patty
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-toby's-tofu-contains-eggs" name="breakfast-protein" value ="toby's-tofu-contains-eggs"/>
+							    Toby's Tofu(contains eggs)
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-toby's-tofu-lite-vegan" name="breakfast-protein" value ="toby's-tofu-lite-vegan"/>
+							    Toby's Tofu Lite(Vegan)
+							</label>	
+							<label >
+							    <input type="checkbox" id="breakfast-bacon-bits" name="breakfast-protein" value ="bacon-bits"/>
+							    Bacon Bits
+							</label>
+							</div>
+
+
+
+
+							
+
+
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">CHEESE:</div>
+							  <label >
+							    <input type="checkbox" id="breakfast-cheddar" name="breakfast-cheese" value ="cheddar"/>
+							    Cheddar
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-swiss" name="breakfast-cheese" value ="swiss "/>
+							    Swiss
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-provolone" name="breakfast-cheese" value ="provolone"/>
+							    Provolone
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-pepper-jack" name="breakfast-cheese" value ="pepper-jack"/>
+							    Pepper Jack
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-cream-cheese" name="breakfast-cream-cheese" value ="cream-cheese"/>
+							   Cream Cheese
+							</label>
+							</div>
+
+
+
+							<div class = "choice">
+							  <div class = "choice-name">VEGETABLES:</div>
+							  <label >
+							    <input type="checkbox" id="breakfast-cucumber" name="breakfast-produce" value ="cucumber "/>
+							    Cucumber +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-bellpepper" name="breakfast-produce" value ="bellpepper "/>
+							    Bell Pepper +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-tomatoes" name="breakfast-produce" value ="tomatoes "/>
+							    Tomatoes +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-olives" name="breakfast-produce" value ="olives "/>
+							    Olives +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-pepperoncini" name="breakfast-produce" value ="pepperoncini "/>
+							    Pepperoncini +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-onions" name="breakfast-produce" value ="onions "/>
+							    Onions +.80
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-spring-mix-lettuce" name="breakfast-spring-mix-lettuce" value ="spring-mix-lettuce"/>
+							    Spring Mix Lettuce +.80
+							</label>
+							</div>
+
+
+							
+
+
+							<div class = "choice">
+							  <div class = "choice-name">EXTRAS:</div>
+							  <label >
+							    <input type="checkbox" id="breakfast-pesto" name="breakfast-extra" value ="basil-pesto"/>
+							    Pesto + 1.00
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-guacamole" name="breakfast-extra" value ="guacamole"/>
+							    Guacamole + 1.00
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-hummus" name="breakfast-extra" value ="hummus"/>
+							    Hummus + 1.00
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-extra-cheese " name="breakfast-extra" value ="extra-cheese"/>
+							    Extra Cheese + 1.00
+							</label>
+							<label >
+							    <input type="checkbox" id="breakfast-extra-protein " name="breakfast-extra" value ="extra-protein"/>
+							    Extra Protein + 1.25
+							</label>
+							</div>
+
+
+		
+
+
+							
+
+
+							</form>
+							</div>
+					</div>
+				</div>
+				<!-- Features -->
+				
+
+		</main>
+		<!-- Main -->
+
+
+

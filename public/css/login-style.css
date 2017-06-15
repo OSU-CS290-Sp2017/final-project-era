@@ -1,0 +1,230 @@
+/*body {
+  background: white;
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #777;
+  font-weight:300;
+  font-size: 16px;
+}*/
+
+#user-login-box {
+  position: fixed;
+  left: 35%;
+  top: 50%;
+  margin: 0px auto;
+  padding: 0px 0px 0px 0px;
+  width: 20%;
+  height:27%;
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 15px;
+  
+  background-color: white;
+  border-color: #ff7314;
+  border: 5px solid #ff7314;
+}
+
+.user-login-greeting {
+  color: #222;
+  font-size: 1.5vw;
+  font-weight:400;
+  float: left;
+  text-shadow: 1px 0 1px #777;
+  position: top;
+  padding: 5% 0% 5% 0%;
+  margin: 4% 2% 0% 2%;
+  align-content: right;
+}
+
+
+.login-beaver-image{
+
+  position: relative;
+  
+  margin: 0.5% 1.5% 0.5% 1.5%;
+  height: 4em;
+  width: 4em;
+  align-content: left;
+  float: left;
+}
+
+#login-close-button {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.user-input-forms {
+  padding-left: 10%;
+  padding-right: 10%
+  margin-top: 10%;
+  margin-right: 0px;
+  margin-left: 0px;
+  width:90%;
+}
+.user-input-forms input {
+  border: 2px solid #d9d9d9 !important;
+  /*color: #bebebe;*/
+  padding: 7px 15px 7px 50px;
+  outline:none;
+  width: 100%;
+  height: 20%;
+    /*transition: all 0.25s ease-in-out;*/
+    /*-webkit-transition: all 0.25s ease-in-out;*/
+    /*-moz-transition: all 0.25s ease-in-out;*/
+  /*margin-bottom: 15px;*/
+}
+
+.user-input-forms input:focus {
+
+    box-shadow: 0 0 5px rgba(48, 168, 218, 1);
+    -webkit-box-shadow: 0 0 5px rgba(48, 168, 218, 1); 
+    -moz-box-shadow: 0 0 5px rgba(48, 168, 218, 1);
+    border:1px solid rgba(48, 168, 218, 1) !important; 
+}
+.user-input-forms #username {
+  background:url("http://i.imgur.com/n6engUt.png") no-repeat left center;
+  background-position: 10px 5px;
+  border-right: 1px solid #f1f1f1;
+}
+.user-input-forms #mail {
+  background:url("http://i.imgur.com/xCWr97f.png") no-repeat left center;
+  background-position: 10px 10px;
+  border-right: 1px solid #f1f1f1;
+}
+.user-input-forms #password {
+  background:url("http://i.imgur.com/69UwNcl.png") no-repeat left center;
+  background-position: 10px 5px;
+  border-right: 1px solid #f1f1f1;
+}
+
+
+
+
+
+.user-lonin-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    /*padding: 10px 11px 10px 10px;*/
+    padding: 2% 2% 2% 2%;
+    border: 0px solid #b96529;
+    border-radius: 8px;
+    background: #992828;
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#e77e33), to(#e77e33));*/
+    /*background: -moz-linear-gradient(top, #e77e33, #e77e33);*/
+    /*background: linear-gradient(to bottom, #e77e33, #e77e33);*/
+    font-family: 'Open Sans', sans-serif;
+    font-weight:500;
+    color: #ffffff;
+    color: #ff7314;
+    text-decoration: none;
+    height: 15%;
+    font-size: 1.0vw;
+    margin-top: 3%;
+    margin-left: 7%;
+    width: 40%;
+    background-color: lightgray;
+}
+.user-lonin-button:hover,
+.user-lonin-button:focus {
+    border: 0px solid #e77e33;
+    background: #db7830;
+    color: #ffffff;
+    text-decoration: none;
+}
+.user-lonin-button:active {
+    background: #982727;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8b4c1f), to(#e77e33));
+    background: -moz-linear-gradient(top, #8b4c1f, #e77e33);
+    background: linear-gradient(to bottom, #8b4c1f, #e77e33);
+}
+/*.user-lonin-button:after{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+  padding-left: 10px;
+    top: -10px;
+    right: -15px;
+    background: url("http://i.imgur.com/ZcP5IpD.png") no-repeat center center #db7830;
+    background-size: 8px 11px;
+  -webkit-border-radius: 0px 8px 8px 0px;
+  -moz-border-radius: 0px 8px 8px 0px;
+  -o-border-radius: 0px 8px 8px 0px;
+  -ms-border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 8px 8px 0px;
+}*/
+
+/*below is css for create button*/
+#create-order-button{
+  position: fixed;
+  right: 30px;
+  bottom: 400px;
+  height: 6em;
+  width: 6em;
+  border: none;
+  border-radius: 20%;
+  /*font-size: 6vw;*/
+  background-color: gray;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#create-order-icon{
+  display: inline-block;
+  /*position: fixed;*/
+  top: 5%;
+  height: 60%;
+  width: 100%;
+  margin: 0 0 0 0;
+  border-radius: 30px;
+  color: white;
+  background-color: gray;
+  font-size: 4em;
+}
+
+
+#order-meal{
+  padding-top: 0px;
+  margin-top: 0px
+  font-size: 6em;
+  font-weight: bold;
+}
+#create-order-button:hover,
+#create-order-button:focus {
+  
+  /*border-radius: 33px;*/
+  font-size: 105%;
+  color:lightgreen;
+  /*background-color: rgba(68, 136, 38, 1);*/
+
+}
+
+
+
+#popUp-login-box{
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2e2e2e;
+  padding: 4px 10px;
+}
+
