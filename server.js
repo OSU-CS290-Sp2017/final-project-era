@@ -103,20 +103,29 @@ app.get('/breakfast_sandwiches_burritos',function(req, res, next){
 // get drink page, used for login 
 app.post('/drink',function(req, res, next){
     
-    if(req.body && req.body.url){
-      var name = req.body.name;
-      var orderName = drinkName;
-      var orderPrice = drinkValue;
-      var orderDescription = drinkDescription;
+    if(req.body.name && 
+        req.body.orderName &&
+        req.body.orderPrice &&
+        req.body.orderDescription ){
 
-      var collection = mongoDB.collection();
-
-
+      console.log("name = "+req.body.name +
+                  "\norderName = ", req.body.orderName +
+                  "\norderPrice = ", req.body.orderPrice +
+                  "\norderDescription = ", req.body.orderDescription);
+      //pass to mongoDB
+      var collection = mongoDB.collection('order');
+      collection.updateOne(
+        {name:req.body.name},
+        {$push:{orderName : req.body.orderName,
+                orderPrice : req.body.orderPrice,
+                orderDescription : req.body.orderDescription}},
+        function(err, result){
+          res.status(200).send();
+        });
 
     }else{
-      res.status(400).send("oops, something wrong on the server");
+      res.status(400).send("oops, cannot send correct info to server");
     }
-    
 });
 
 

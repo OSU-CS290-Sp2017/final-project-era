@@ -41,19 +41,19 @@ createOrderButton.addEventListener('click', function(event2){
 			} 
 			else {
 				console.log("heli22==> no err");
-				var photoCardTemplate = Handlebars.templates.shoppingCartContent;
-				var templateArgs = {
-					name: userName,
-					orderName:drinkName,
-					orderPrice:drinkValue,
-					orderDescription:drinkDescription
-				};
+				// var photoCardTemplate = Handlebars.templates.shoppingCartContent;
+				// var templateArgs = {
+				// 	name: userName,
+				// 	orderName:drinkName,
+				// 	orderPrice:drinkValue,
+				// 	orderDescription:drinkDescription
+				// };
 
-				var photoCardHTML = photoCardTemplate(templateArgs);
-	          	console.log("url==>"+photoCardHTML);
+				// var photoCardHTML = photoCardTemplate(templateArgs);
+	   //        	console.log("url==>"+photoCardHTML);
 
-	          	var photoCardContainer = document.querySelector('.photo-card-container');
-	          	photoCardContainer.insertAdjacentHTML('beforeend', photoCardHTML);
+	   //        	var photoCardContainer = document.querySelector('.photo-card-container');
+	   //        	photoCardContainer.insertAdjacentHTML('beforeend', photoCardHTML);
 
 	      	}
 	  });

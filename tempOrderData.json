@@ -1,18 +1,20 @@
-{
+[{
 	"name":"Dapeng",
 	"order":[
 		{
-			"orderNum":01,
-			"orderName": "ice coffee 16oz",
-			"orderCost":1.75,
+			"orderListNum":01,
+			"orderName": "Shot in the Dark",
+			"orderPrice":3.45,
+			"orderDescription":"hotDrink-ShotInTheDark-20",
 			"orderQuantity":1
 		},
 		{
-			"orderNum":02,
-			"orderName": "ice coffee 20oz",
-			"orderCost":2.25,
-			"orderQuantity":2
+			"orderListNum":02,
+			"orderName": "Steamer",
+			"orderPrice":2.75,
+			"orderDescription":"hotDrink-Steamer-16",
+			"orderQuantity":1
 		}
 	],
-	"status":"unSubmit"
-}
+	"status":"unSubmitted"
+}]
