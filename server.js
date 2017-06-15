@@ -24,8 +24,9 @@ var mongoDB;
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-// app.use(bodyParser.json());
 
+//******************************************************************************
+// get pages
 // get index page, used for login 
 app.get('/index',function(req, res, next){
     console.log(req.url);
@@ -96,8 +97,20 @@ app.get('/breakfast_sandwiches_burritos',function(req, res, next){
     res.render('breakfast_sandwiches_burritosPage',templateArgs);
 });
 
-
+//******************************************************************************
+// post oders from each page
 // get information from mongoDB (collection "orderInfo") to shopping_cart page
+// get drink page, used for login 
+app.post('/shoppingCart',function(req, res, next){
+    console.log(req.url);
+    var templateArgs = {
+    userName:'login here',
+    order:false
+    };
+    
+});
+
+
 
 app.get('/shoppingCart', function (req, res, next) {
   // console.log(req.url);
