@@ -4,7 +4,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 // var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-
+var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -24,7 +24,7 @@ var mongoDB;
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-
+app.use(bodyParser.json());
 //******************************************************************************
 // get pages
 // get index page, used for login 
@@ -41,7 +41,7 @@ app.get('/index',function(req, res, next){
 app.get('/drink',function(req, res, next){
     console.log(req.url);
     var templateArgs = {
-    userName:'login here',
+    userName:'Dapeng',
     order:false
     };
     res.render('drinkPage',templateArgs);
@@ -101,12 +101,21 @@ app.get('/breakfast_sandwiches_burritos',function(req, res, next){
 // post oders from each page
 // get information from mongoDB (collection "orderInfo") to shopping_cart page
 // get drink page, used for login 
-app.post('/shoppingCart',function(req, res, next){
-    console.log(req.url);
-    var templateArgs = {
-    userName:'login here',
-    order:false
-    };
+app.post('/drink',function(req, res, next){
+    
+    if(req.body && req.body.url){
+      var name = req.body.name;
+      var orderName = drinkName;
+      var orderPrice = drinkValue;
+      var orderDescription = drinkDescription;
+
+      var collection = mongoDB.collection();
+
+
+
+    }else{
+      res.status(400).send("oops, something wrong on the server");
+    }
     
 });
 

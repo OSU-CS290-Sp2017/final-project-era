@@ -33,25 +33,29 @@ createOrderButton.addEventListener('click', function(event2){
 	
 
 	if(userName != null){
+		console.log("heli1==> userName != null now");
 		storeUserOrder(userName,drinkName,drinkDescription, drinkValue, function(err){
 			if (err) {
+				console.log("heli12==> one err");
 				alert("Unable to place current order.  Got this error:\n\n" + err);
 			} 
-			// else {
+			else {
+				console.log("heli22==> no err");
+				var photoCardTemplate = Handlebars.templates.shoppingCartContent;
+				var templateArgs = {
+					name: userName,
+					orderName:drinkName,
+					orderPrice:drinkValue,
+					orderDescription:drinkDescription
+				};
 
-			// 	var photoCardTemplate = Handlebars.templates.photoCard;
-			// 	var templateArgs = {
-			// 		url: photoURL,
-			// 		caption: photoCaption
-			// 	};
+				var photoCardHTML = photoCardTemplate(templateArgs);
+	          	console.log("url==>"+photoCardHTML);
 
-			// 	var photoCardHTML = photoCardTemplate(templateArgs);
-	  //         	// console.log(photoCardHTML);
+	          	var photoCardContainer = document.querySelector('.photo-card-container');
+	          	photoCardContainer.insertAdjacentHTML('beforeend', photoCardHTML);
 
-	  //         	var photoCardContainer = document.querySelector('.photo-card-container');
-	  //         	photoCardContainer.insertAdjacentHTML('beforeend', photoCardHTML);
-
-	  //     	}
+	      	}
 	  });
 	}else{
 		alert("You have to log in first");
@@ -66,12 +70,13 @@ function getUserNameFromButton(){
 
 
 function storeUserOrder(userName,drinkName,drinkDescription, drinkValue, callback){
-	var postURL = "/shopping_cart";
+	var postURL = "/drink";
 	var postRequest = new XMLHttpRequest();
 	postRequest.open('POST', postURL);
 	postRequest.setRequestHeader('Content-Type', 'application/json');
-
-	postRequest.addEventListener('load', function (event) {
+	console.log("heli01==>postRequest == "+postRequest);
+	postRequest.addEventListener('load', function (event) { 
+		console.log("event:status = "+event.target.status);
 		var error;
 		if (event.target.status !== 200) {
 			error = event.target.response;
@@ -85,5 +90,6 @@ function storeUserOrder(userName,drinkName,drinkDescription, drinkValue, callbac
 		orderPrice:drinkValue,
 		orderDescription:drinkDescription
 	};
+	console.log("req = "+JSON.stringify(postBody));
 	postRequest.send(JSON.stringify(postBody)); 
 }
