@@ -277,10 +277,13 @@ app.post('/drink',function(req, res, next){
 
 // get shoppingCart page, used for submit order 
 app.get('/shoppingCart',function(req, res, next){
-  var userName = "Dapeng";
+  var userName = "(YIFAN SHEN)";
+
     // console.log(req.url,"person = ",person);
     var collection = mongoDB.collection('tempOrder');
+    console.log("eeee",collection);
     collection.find({name:userName}).toArray(function(err, tempOrderData){
+      console.log(tempOrderData);
         if (err) {
             res.status(500).send("Error fetching people from DB.");
         } else {
@@ -289,7 +292,7 @@ app.get('/shoppingCart',function(req, res, next){
               tempOrderData[i].subTotal = (tempOrderData[i].quantity * tempOrderData[i].orderPrice).toFixed(2);
               totalPrice +=(tempOrderData[i].quantity * tempOrderData[i].orderPrice);
             }
-            console.log(tempOrderData);
+            // console.log(tempOrderData);
             var templateArgs = {
               name:userName,
               tempOrderData : tempOrderData,
@@ -308,10 +311,43 @@ app.get('/shoppingCart',function(req, res, next){
 });
 
 // post content on the shopping cart page, to the mongoDB
-// app.post('/shoppingCart',function(req, res, next){
-    
+app.post('/shoppingCart',function(req, res, next){
+    console.log(req.body.postData);
+    if(req.body.postData){
+        var rawData = req.body.postData;
+        for (var i = rawData.length - 1; i >= 0; i--) {
+          rawData[i].status = "submit-wait-for-process";
+          rawData[i].submitTime = new Date().toLocaleString();
+        }
 
-// }
+        var collection = mongoDB.collection('OrdersToChef');
+        collection.insert(rawData).then(function(){
+        });
+    }else{
+      res.status(400).send("oops, cannot receive correct info form client");
+    }
+
+});
+
+
+// chef page
+app.get('/chef', function (req, res, next) {
+
+  var collection = mongoDB.collection('OrdersToChef');
+  collection.find({}).toArray(function (err, ordersData) {
+
+    if (err) {
+      res.status(500).send("Error fetching people from DB.");
+    } else {
+      var templateArgs = {
+        orders: ordersData,
+      };
+      res.render('chefPage', templateArgs);
+    }
+
+  });
+
+});
 
 
 app.use(express.static(path.join(__dirname, 'public')));
