@@ -748,7 +748,7 @@ ul ul, ul ol, ol ul, ol ol {
 /* Buttons */
 .btn {
   font-family: "Lato", sans-serif;
-  border-bottom: none !important;
+  /*border-bottom: none !important;*/
   text-transform: uppercase;
   letter-spacing: 2px;
   -webkit-border-radius: 4px;
@@ -1328,11 +1328,11 @@ max-height:60%;
   font-size: 30px;
   font-weight: bold;
 }
-
-/*.drinks-table table{
-    border-collapse: collapse;
-    border: 1px solid #ddd;
-    width: 100%;
+.function_bar{
+  padding-top: 10px;
+  font-size: 20px;
+  color:black;
+  font-weight: bold;
 }
 .drink-row th,td{
   border: 1px solid #ddd;
@@ -1341,4 +1341,21 @@ max-height:60%;
 }
 tr:nth-child(even){
   background-color: #f2f2f2
-}*/
+}
+
+#greeting{
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: black;
+  font-weight: bold;
+  display: inline;
+}
+
+#top_log_reg{
+  color: black;
+}
+
+#login_block{
+  width: 40%;
+}
+

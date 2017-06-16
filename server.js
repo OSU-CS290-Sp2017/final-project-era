@@ -4,34 +4,148 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 // var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-var bodyParser = require('body-parser');
-var app = express();
-var port = process.env.PORT || 3000;
 
-// var mongoHost = process.env.MONGO_HOST;
-// var mongoPort = process.env.MONGO_PORT || 27017;
-// var mongoUser = process.env.MONGO_USER;
-// var mongoPassword = process.env.MONGO_PASSWORD;
-// var mongoDBName = process.env.MONGO_DB;
-// var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword +
-//   '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
-var mongoURL = 'mongodb://localhost:27017/myproject'
+var app = express();
+//var port = process.env.PORT || 3000;
+
+
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
+var flash = require('connect-flash');
+var session = require('express-session');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/loginapp');
+var db = mongoose.connection;
+
+var mongoURL = 'mongodb://localhost:5000/myproject'
 var mongoDB;
 
 
-// console.log('== MongoDB URL:', mongoURL);
-
+app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+
+
+
+
+
+
+
+// evanshen add start for app.js
+
+
+// BodyParser Middleware
 app.use(bodyParser.json());
-//******************************************************************************
-// get pages
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// Set Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Express Session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Express Validator
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
+// Connect Flash
+app.use(flash());
+
+// Global Vars
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  res.locals.user = req.user || null;  // 登录的时候的判断条件 
+  next();
+});
+
+
+// if you meet / you need to use routes
+//app.use('/', routes);
+app.use('/users', users);
+
+
+
+
+// evanshen add end for app.js
+
+
+
+
+
+
+
+
+// get index page, used for login 
+app.get('',function(req, res, next){
+    console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
+    var templateArgs = {
+    userName:user,
+    order:false
+    };
+    res.render('indexPage',templateArgs);
+});
+
+// get index page, used for login 
+app.get('/',function(req, res, next){
+    console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
+    var templateArgs = {
+    userName:user,
+    order:false
+    };
+    res.render('indexPage',templateArgs);
+});
+
+
 // get index page, used for login 
 app.get('/index',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('indexPage',templateArgs);
@@ -40,8 +154,12 @@ app.get('/index',function(req, res, next){
 // get drink page, used for login 
 app.get('/drink',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'Dapeng',
+    userName:user,
     order:false
     };
     res.render('drinkPage',templateArgs);
@@ -50,8 +168,12 @@ app.get('/drink',function(req, res, next){
 // get breakfast page, used for login 
 app.get('/breakfast',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('breakfastPage',templateArgs);
@@ -60,8 +182,12 @@ app.get('/breakfast',function(req, res, next){
 // get sandwich page, used for login 
 app.get('/sandwich',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('sandwichPage',templateArgs);
@@ -70,8 +196,12 @@ app.get('/sandwich',function(req, res, next){
 // get salad page, used for login 
 app.get('/salad',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('saladPage',templateArgs);
@@ -80,8 +210,12 @@ app.get('/salad',function(req, res, next){
 // get good_eat page, used for login 
 app.get('/good_eat',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('good_eatPage',templateArgs);
@@ -90,8 +224,12 @@ app.get('/good_eat',function(req, res, next){
 // get breakfast_sandwiches_burritos page, used for login 
 app.get('/breakfast_sandwiches_burritos',function(req, res, next){
     console.log(req.url);
+    var user = 'please log in';
+    if(res.locals.user){
+      user = res.locals.user.name;
+    }
     var templateArgs = {
-    userName:'login here',
+    userName:user,
     order:false
     };
     res.render('breakfast_sandwiches_burritosPage',templateArgs);
@@ -182,6 +320,12 @@ app.get('*', function (req, res) {
   res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
+
+
+app.set('port', (process.env.PORT || 3000));
+
+var port = process.env.PORT || 3000;
+
 // Start the server listening on the specified port.
 MongoClient.connect(mongoURL, function (err, db) {
   if (err) {
@@ -190,5 +334,10 @@ MongoClient.connect(mongoURL, function (err, db) {
   mongoDB = db;
   app.listen(port, function () {
     console.log("== Server listening on port", port);
+    
   });
+
 });
+
+
+

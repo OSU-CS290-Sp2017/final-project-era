@@ -63,8 +63,15 @@ createOrderButton.addEventListener('click', function(event2){
 
 });
 function getUserNameFromButton(){
-	var loginButton = document.getElementById('popUp-login-box');
-	return loginButton.textContent;
+	var loginButton = document.getElementById('greeting');
+	// alert("Please login first!"+loginButton.textContent);
+	if(loginButton.textContent === '(please log in)' || !loginButton ){
+		alert("Please login first!");
+		return "newUser";
+	}else{
+		return loginButton.textContent;
+		
+	}
 }
 
 

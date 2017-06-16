@@ -13,7 +13,9 @@
 			<div class="container">
 					<div class="row">
 					<div id ="osu-hat" >
-						<img src="/images/logo.svg" alt="Oregon State Univeristy" class="osu-hat-class">
+					<a href="index">
+						<img src="/images/logo.svg" alt="Oregon State Univeristy" class="osu-hat-class" > </a>
+						{{>header_operations}}
 					</div>
 						<div class="col-md-12">
 							<div class="owl-carousel owl-carousel-fullwidth">
@@ -61,10 +63,7 @@
 						<a href="breakfast">Breakfast</a>
 					</li>
 
-					<li>
-						<button  id="popUp-login-box">{{userName}}</button> 
-					</li>
-						
+					<a  id="greeting">({{userName}})</a> 
 					
 				</ul>
 			</nav>

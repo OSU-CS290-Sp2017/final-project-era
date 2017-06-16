@@ -1,0 +1,61 @@
+<!-- Header -->
+		<header id="fh5co-header" role="banner">
+			
+			<!-- Logo -->
+			
+				<!-- <a href="index.html">
+					<img src="images/logo.png">
+				</a> -->
+
+		
+			
+			<!-- Logo -->
+			<div class="container">
+					<div class="row">
+					<div id ="osu-hat" >
+						<a href="index">
+						<img src="/images/logo.svg" alt="Oregon State Univeristy" class="osu-hat-class" > </a>
+					
+
+						<!-- evan shen --> 
+
+						<div class="function_bar header clearfix" >
+					        <nav>
+					          <ul class="nav nav-pills pull-right">
+					           {{#if user}}  <!--用户登录 -->
+					              <li role="presentation"><a href="/" id="top_log_reg">Dashboard</a></li>
+
+					              <li role="presentation"><a href="/users/logout" id="top_log_reg">Logout</a></li>
+					            {{else}} <!--用户没登录 -->
+
+					              <li role="presentation"><a href="/users/login" id="top_log_reg">Login</a></li>
+					              <li role="presentation"><a href="/users/register" id="top_log_reg">Register</a></li>
+					            {{/if}}
+					          </ul>
+					        </nav>
+					    </div>	
+					  <!-- evan shen end  --> 					
+				    </div>
+				      
+
+
+
+
+
+						<div class="col-md-12">
+							<div class="owl-carousel owl-carousel-fullwidth">
+						    <div class="item"><img src="/images/slide_1.png" alt="image"></div>
+						    <div class="item"><img src="/images/slide_2.png" alt="image"></div>
+						    <div class="item"><img src="/images/slide_3.png" alt="image"></div>
+							</div>
+						</div>
+					</div>
+				</div> 
+
+			</div>
+			<!-- Logo -->
+			
+			<!-- Mobile Toggle Menu Button -->
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		</header>
+		<!-- Header -->

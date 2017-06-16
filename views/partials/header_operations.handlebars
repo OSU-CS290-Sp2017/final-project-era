@@ -1,0 +1,15 @@
+<!-- used for the top status information bar -->
+
+<div class="function_bar header clearfix" >
+    <nav>
+      <ul class="nav nav-pills pull-right">
+       {{#if user}}  <!--用户登录 -->
+          <li role="presentation"><a href="/shoppingCart" id="top_log_reg">Check Out</a></li>
+          <li role="presentation"><a href="/users/logout" id="top_log_reg">Logout</a></li>
+        {{else}} <!--用户没登录 -->
+          <li role="presentation"><a href="/users/login" id="top_log_reg">Login</a></li>
+          <li role="presentation"><a href="/users/register" id="top_log_reg">Register</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+</div>	
