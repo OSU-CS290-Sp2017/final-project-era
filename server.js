@@ -153,16 +153,10 @@ app.get('/shoppingCart',function(req, res, next){
             }
             console.log(tempOrderData);
             var templateArgs = {
+              name:userName,
               tempOrderData : tempOrderData,
               totalPrice:totalPrice.toFixed(2)
             };
-            // var templateArgs = {
-            //     orderName:"coffee",
-            //     orderDescription: "not free",
-            //     orderPrice:99,
-            //     order:false
-            // };
-            // res.render('shopping_cart/index', templateArgs);
             res.render('shoppingCartPage', templateArgs);
         }
     });
@@ -175,50 +169,11 @@ app.get('/shoppingCart',function(req, res, next){
     
 });
 
-// get shoppingCart page, used for submit order 
-// app.get('/shoppingCart', function (req, res, next) {
-//   console.log(req.url);
-//   // var collection = mongoDB.collection('tempOrder');
+// post content on the shopping cart page, to the mongoDB
+// app.post('/shoppingCart',function(req, res, next){
+    
 
-//   // collection.find().toArray(function(err, tempOrderData){
-//   //   if (err) {
-//   //     res.status(500).send("Error fetching people from DB.");
-//   //   } else {
-//   //     console.log(tempOrderData);
-//   //     var templateArgs = {
-//   //       // name:tempOrderData,
-//   //       order: "find"
-        
-//   //     };
-//   //     // res.render('shopping_cart/index', templateArgs);
-//   //     res.render('shoppingCartPage', templateArgs);
-//   //   }
-//   // // });
-//   var templateArgs = {
-//     orderName:"coffee",
-//     orderDescription: "not free",
-//     orderPrice:99,
-//     order:false
-//   };
-//   res.render('shoppingCartPage',templateArgs);
-//   // var collection = mongoDB.collection('userInfo');
-//   // collection.find({}).toArray(function (err, peopleData) {
-
-//   //   if (err) {
-//   //     res.status(500).send("Error fetching people from DB.");
-//   //   } else {
-//   //     var templateArgs = {
-//   //       people: peopleData,
-//   //       title: "Photos of People"
-//   //     };
-//   //     res.render('chefPage', templateArgs);
-//   //   }
-
-//   // });
-
-// });
-
-
+// }
 
 
 app.use(express.static(path.join(__dirname, 'public')));
