@@ -23,7 +23,10 @@ var closeLoginPanelButton = document.getElementById('login-close-button');
 function closeLoginPanel(event){
 	addLoginContainer.classList.add("hidden");
 }
-closeLoginPanelButton.addEventListener('click', closeLoginPanel);
+if(closeLoginPanelButton){
+	closeLoginPanelButton.addEventListener('click', closeLoginPanel);
+}
+
 
 
 

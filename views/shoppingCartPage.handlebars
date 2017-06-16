@@ -11,14 +11,14 @@
     <label class="product-line-price">Total</label>
   </div>
 
-  
-  {{>shoppingCartContent}}
-
+  {{#each tempOrderData}}
+    {{>shoppingCartContent}}
+  {{/each}}
 
   <div class="totals">
     <div class="totals-item">
       <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">11.98</div>
+      <div class="totals-value" id="cart-subtotal">{{totalPrice}}</div>
     </div>
 
 
@@ -29,5 +29,5 @@
 </main>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+  <script src="/js/shoppingCart.js"></script>
 

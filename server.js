@@ -108,68 +108,116 @@ app.post('/drink',function(req, res, next){
         req.body.orderPrice &&
         req.body.orderDescription ){
 
-      console.log("name = "+req.body.name +
-                  "\norderName = ", req.body.orderName +
-                  "\norderPrice = ", req.body.orderPrice +
-                  "\norderDescription = ", req.body.orderDescription);
+      // console.log("name = "+req.body.name +
+      //             "\norderName = ", req.body.orderName +
+      //             "\norderPrice = ", req.body.orderPrice +
+      //             "\norderDescription = ", req.body.orderDescription);
       //pass to mongoDB
-      var collection = mongoDB.collection('order');
-      collection.updateOne(
-        {name:req.body.name},
-        {$push:{orderName : req.body.orderName,
-                orderPrice : req.body.orderPrice,
-                orderDescription : req.body.orderDescription}},
-        function(err, result){
+      var collection = mongoDB.collection('tempOrder');
+      collection.update(
+        { name:req.body.name,
+          orderName:req.body.orderName,
+          orderPrice:req.body.orderPrice,
+          orderDescription : req.body.orderDescription,
+          status: "unsubmitted"},
+        {$inc: {quantity: 1}},
+        {upsert: true, safe: false},
+        function(err, data){
+          if(err){
+            console.log("err =>",err);
+          }else{
+            console.log("update succeded");
+          }
           res.status(200).send();
-        });
-
+        }
+        );
     }else{
       res.status(400).send("oops, cannot send correct info to server");
     }
 });
 
 
-
-app.get('/shoppingCart', function (req, res, next) {
-  // console.log(req.url);
-  // var collection = mongoDB.collection('tempOrderData');
-  // collection.find().toArray(function(err, tempOrderData){
-  //   if (err) {
-  //     res.status(500).send("Error fetching people from DB.");
-  //   } else {
-  //     console.log(tempOrderData);
-  //     var templateArgs = {
-  //       // name:tempOrderData,
-  //       order: "find"
-        
-  //     };
-  //     // res.render('shopping_cart/index', templateArgs);
-  //     res.render('shoppingCartPage', templateArgs);
-  //   }
-  // // });
-  var templateArgs = {
+// get shoppingCart page, used for submit order 
+app.get('/shoppingCart',function(req, res, next){
+  var userName = "Dapeng";
+    // console.log(req.url,"person = ",person);
+    var collection = mongoDB.collection('tempOrder');
+    collection.find({name:userName}).toArray(function(err, tempOrderData){
+        if (err) {
+            res.status(500).send("Error fetching people from DB.");
+        } else {
+            var totalPrice = 0;
+            for (var i = tempOrderData.length - 1; i >= 0; i--) {
+              tempOrderData[i].subTotal = (tempOrderData[i].quantity * tempOrderData[i].orderPrice).toFixed(2);
+              totalPrice +=(tempOrderData[i].quantity * tempOrderData[i].orderPrice);
+            }
+            console.log(tempOrderData);
+            var templateArgs = {
+              tempOrderData : tempOrderData,
+              totalPrice:totalPrice.toFixed(2)
+            };
+            // var templateArgs = {
+            //     orderName:"coffee",
+            //     orderDescription: "not free",
+            //     orderPrice:99,
+            //     order:false
+            // };
+            // res.render('shopping_cart/index', templateArgs);
+            res.render('shoppingCartPage', templateArgs);
+        }
+    });
+    var templateArgs = {
+        orderName:"coffee",
+        orderDescription: "not free",
+        orderPrice:99,
+        order:false
+    };
     
-    order:false
-  };
-  res.render('shoppingCartPage',templateArgs);
-  // var collection = mongoDB.collection('userInfo');
-  // collection.find({}).toArray(function (err, peopleData) {
-
-  //   if (err) {
-  //     res.status(500).send("Error fetching people from DB.");
-  //   } else {
-  //     var templateArgs = {
-  //       people: peopleData,
-  //       title: "Photos of People"
-  //     };
-  //     res.render('chefPage', templateArgs);
-  //   }
-
-  // });
-
 });
 
-// post information from shopping_cart to mongoDB, save to "processing" collection
+// get shoppingCart page, used for submit order 
+// app.get('/shoppingCart', function (req, res, next) {
+//   console.log(req.url);
+//   // var collection = mongoDB.collection('tempOrder');
+
+//   // collection.find().toArray(function(err, tempOrderData){
+//   //   if (err) {
+//   //     res.status(500).send("Error fetching people from DB.");
+//   //   } else {
+//   //     console.log(tempOrderData);
+//   //     var templateArgs = {
+//   //       // name:tempOrderData,
+//   //       order: "find"
+        
+//   //     };
+//   //     // res.render('shopping_cart/index', templateArgs);
+//   //     res.render('shoppingCartPage', templateArgs);
+//   //   }
+//   // // });
+//   var templateArgs = {
+//     orderName:"coffee",
+//     orderDescription: "not free",
+//     orderPrice:99,
+//     order:false
+//   };
+//   res.render('shoppingCartPage',templateArgs);
+//   // var collection = mongoDB.collection('userInfo');
+//   // collection.find({}).toArray(function (err, peopleData) {
+
+//   //   if (err) {
+//   //     res.status(500).send("Error fetching people from DB.");
+//   //   } else {
+//   //     var templateArgs = {
+//   //       people: peopleData,
+//   //       title: "Photos of People"
+//   //     };
+//   //     res.render('chefPage', templateArgs);
+//   //   }
+
+//   // });
+
+// });
+
 
 
 
